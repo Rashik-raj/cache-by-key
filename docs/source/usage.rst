@@ -1,9 +1,11 @@
 Usage
 =====
 
-1) Caching
+Caching
+-------
 
 - Using minimalistic cache_by_key decorator
+
 .. code-block:: python
    :linenos:
 
@@ -16,6 +18,7 @@ Usage
     fib(100)
 
 - Using hash_arg key in cache_by_key decorator
+
 .. code-block:: python
    :linenos:
 
@@ -30,6 +33,7 @@ Usage
 **Notice that value of hash_arg is the name of the keyword. And we also should pass the value using keyword when calling a function.**
 
 - Controlling the cache size
+
 .. code-block:: python
    :linenos:
 
@@ -45,23 +49,29 @@ Usage
 
 **Also max_secondary_size is set to 1 because we only have one parameter. If there had been other parameter along side n, then for each value of n, we can cache different variation of other parameter using secondary cache.**
 
-2) View cache info
+View cache info
+---------------
+**This will return the cache info as a dictionary containing "cache_len", "max_primary_size", "max_secondary_size", "cache_hit" and "cache_miss".**
 
 .. code-block:: python
     :linenos:
+
     print(fib.cache_info())
 
-3) Remove certain cache
+Remove certain cache
+--------------------
+**This will remove cache for fib function having n=10.**
 
 .. code-block:: python
     :linenos:
+
     fib.remove_cache(hash_arg_value=10)
 
-**This will remove cache for fib function having n=10**
-
-4) Clearing the cache
+Clearing the cache
+------------------
+**This will clear all the cache for fib function.**
 
 .. code-block:: python
     :linenos:
-    fib.clear_cache()
 
+    fib.clear_cache()
