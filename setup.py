@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="cache-by-key",
-    version="0.0.1",
+    version="0.0.2",
     author="Rashikraj Shrestha",
     author_email="rashik123.rs@gmail.com",
     description="cache-by-key is a lru based cache that allows you to cache by specific keyword argument from a decorated function.",
