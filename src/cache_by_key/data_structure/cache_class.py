@@ -2,8 +2,8 @@ import hashlib
 from functools import update_wrapper
 from typing import Any, Callable
 
-from src.cache_by_key.constants import MAX_PRIMARY_SIZE, MAX_SECONDARY_SIZE, MIN_SECONDARY_SIZE, MIN_PRIMARY_SIZE
-from src.cache_by_key.data_structure import DequeCacheDict
+from ..constants import MAX_PRIMARY_SIZE, MAX_SECONDARY_SIZE, MIN_SECONDARY_SIZE, MIN_PRIMARY_SIZE
+from ..data_structure import DequeCacheDict
 
 
 class CacheByKey:
